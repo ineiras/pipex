@@ -9,24 +9,28 @@
 
 ## 🌐 English Description
 
-**pipex** is a Unix-based project where I recreated the behavior of shell piping (`|`) by chaining commands through inter-process communication. The goal was to deepen my understanding of process creation, file descriptor manipulation, and command execution using system calls like `pipe()`, `fork()`, and `execve()` in C.
+**pipex** is one of my first experiences building low-level tools in C, simulating how shell piping (`|`) works under the hood. It was a great opportunity to understand how commands can be chained together through processes and file descriptors.
 
-The program simulates the following shell behavior:
+The program mimics this shell behavior:
 
 ```bash
 < infile cmd1 | cmd2 > outfile
 ```
-Key concepts explored:
 
-Process creation and synchronization
 
-Redirection of standard input/output
+**Key concepts explored:**
 
-Executing commands via the PATH
+-  Creating and synchronizing processes with `fork()`
 
-File descriptor and pipe management
+-  Connecting commands using pipes and file descriptors
+
+-  Redirecting standard input/output manually
+
+-  Executing binaries with `execve()` and resolving paths
 
 > ✅ **Status:** This repository is complete and will not receive further updates. 
+
+
 ---
 
 ## 🇪🇸 Descripción en Español
@@ -37,17 +41,20 @@ El programa simula el siguiente comportamiento de la shell:
 ```bash
 < infile cmd1 | cmd2 > outfile
 ```
-Conceptos clave abordados:
 
-Creación y sincronización de procesos
 
-Redirección de entradas y salidas estándar
+**Conceptos clave abordados:**
 
-Ejecución de comandos usando la variable PATH
+-  Crear y sincronizar procesos usando `fork()`
 
-Gestión de descriptores de archivo y pipes
+-  Comunicar procesos a través de pipes
+
+-  Redirigir la entrada y salida estándar a mano
+
+-  Ejecutar comandos con `execve()` y buscar rutas en `PATH`
 
 > ✅ **Status:** Este repositorio está finalizado y no se actualizará.
+
 
 ---
 ## 🧪 How to Use
